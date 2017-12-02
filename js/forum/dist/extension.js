@@ -11,6 +11,8 @@ System.register('flarum/likes/addLikeAction', ['flarum/extend', 'flarum/app', 'f
 
       if (post.isHidden() || !post.canLike()) return;
 
+      if (!(app.cache.discussionList && app.cache.discussionList.canStartDiscussion)) return;
+
       var isLiked = app.session.user && post.likes().some(function (user) {
         return user === app.session.user;
       });
