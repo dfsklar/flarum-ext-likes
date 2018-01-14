@@ -9,9 +9,7 @@ export default function() {
 
     if (post.isHidden() || !post.canLike()) return;
 
-    if ( !
-      ( app.cache.discussionList && app.cache.discussionList.canStartDiscussion ) )
-          return;
+    if ( ! post.discussion().loggedinUserIsMemberOfGroup ) return;
 
     let isLiked = app.session.user && post.likes().some(user => user === app.session.user);
 
