@@ -1,5 +1,5 @@
 {
-    "name": "flarum/flarum-ext-likes",
+    "name": "dfsklar/flarum-ext-likes",
     "description": "Allow users to like posts.",
     "type": "flarum-extension",
     "keywords": ["discussion"],
